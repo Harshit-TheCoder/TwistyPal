@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rubik's Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.cubing.net/v0/js/cubing/twisty" type="module"></script>
+</head>
+<body class="bg-gray-900 text-white p-4 m-4 min-h-screen">
+  <h1 class="text-5xl text-white text-bold shadow-md text-center">Welcome to TwistyPal !!</h1>
+
+    <header class="py-6 bg-gray-900 shadow-md">
+        <nav>
+            <a href="#3by3" style="text-decoration: none;"><h2 class="text-xl font-semibold mb-2 text-cyan-400">🔍 #3*3*3 Rubiks Cube</h2></a>
+        </nav>
+    </header>
+  <!-- Load cubing.js from official CDN -->
+  
+
+  <!-- Player with your algorithm -->
+   <main class="min-h-screen">
+        <section id="3by3">
+            <h2 class="text-3xl text-white p-2 m-2 shadow-md">3*3*3 Rubiks Cube Guide</h2>
+            <h3 class="text-2xl text-white p-2 m-2">Yellow Cross Algorithm</h3>
+            <twisty-player
+                puzzle="3x3x3"
+                alg="R U R' U R U U R'"
+                background="none"
+                playback-view="end"
+                style="width:402px; height:402px;">
+            </twisty-player>
+            <br>
+            <h3 class="text-2xl text-white p-2 m-2">Complete Yellow Colour Side After Yellow Cross</h3>
+            <twisty-player
+                puzzle="3x3x3"
+                alg="R' F R' B B R F' R' B B R R U'"
+                background="none"
+                playback-view="end"
+                style="width:402px; height:402px;">
+            </twisty-player>
+            <br>
+            <h3 class="text-2xl text-white p-2 m-2">Correctly Align Last Layer Corner Pieces</h3>
+            <twisty-player
+                puzzle="3x3x3"
+                alg="R' F R' B B R F' R' B B R R U'"
+                background="none"
+                playback-view="end"
+                style="width:402px; height:402px;">
+            </twisty-player>
+            <br>
+            <h3 class="text-2xl text-white p-2 m-2">Complete Last Layer</h3>
+            <twisty-player
+                puzzle="3x3x3"
+                alg="F F U L R' F F L' R U F F"
+                background="none"
+                playback-view="end"
+                style="width:402px; height:402px;">
+            </twisty-player>
+            <br>
+        </section>
+        
+   </main>
+  
+  <footer class="text-center py-4 text-white text-xl border-t border-gray-700 mx-auto">
+        &copy; 2025 Harshit Harlalka. All rights reserved.
+  </footer>
+</body>
+</html>
