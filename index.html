@@ -109,54 +109,99 @@
       <h2 class="text-3xl font-bold mt-12 mb-6 border-l-4 border-cyan-500 pl-4">
         Algorithms
       </h2>
+      
+      <h2 class="text-3xl font-bold mt-12 mb-6 border-l-4 border-cyan-500 pl-4">
+        Make White Cross
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-300 text-center">White Dot Case</h3>
+            <twisty-player
+              puzzle="3x3x3"
+              alg="F U R U' R' F'"
+              background="none"
+              playback-view="end"
+              style="width:100%; height:300px;"
+            ></twisty-player>
+          </div>
 
-      <div class="grid sm:grid-cols-2 gap-8">
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300">Yellow Cross</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            alg="R U R' U R U U R'"
-            background="none"
-            playback-view="end"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-        </div>
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-300 text-center">White L Case</h3>
+            <twisty-player
+              puzzle="3x3x3"
+              alg="F R U R' U' F'"
+              background="none"
+              playback-view="end"
+              style="width:100%; height:300px;"
+            ></twisty-player>
+          </div>
 
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300">Complete Yellow Side</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            setup-alg="R U R' U R U U R'"
-            alg="R U R' U R U U R'"
-            background="none"
-            playback-view="start"
-            playback-loop="once"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-        </div>
-
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300">Align Corners</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            alg="R' F R' B B R F' R' B B R R U'"
-            background="none"
-            playback-view="end"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-        </div>
-
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300">Complete Last Layer</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            alg="F F U L R' F F L' R U F F"
-            background="none"
-            playback-view="end"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-        </div>
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-300 text-center">White Horizontal Line</h3>
+            <twisty-player
+              puzzle="3x3x3"
+              alg="F U R U' R' F'"
+              background="none"
+              playback-view="end"
+              style="width:100%; height:300px;"
+            ></twisty-player>
+          </div>
       </div>
+
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-l-4 border-cyan-500 pl-4">
+            Complete White Side
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-cyan-300">White Cross - Case 1</h3>
+            <twisty-player
+              puzzle="3x3x3"
+              alg="R U R' U R U U R' U U"
+              background="none"
+              playback-view="end"
+              style="width:100%; height:300px;"
+            ></twisty-player>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-cyan-300">White Cross - Case 2</h3>
+            <twisty-player
+              puzzle="3x3x3"
+              alg="R U R' U R U U R' U U R U R' U R U U R' U U"
+              background="none"
+              playback-view="end"
+              style="width:100%; height:300px;"
+            ></twisty-player>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-l-4 border-cyan-500 pl-4">
+          Complete Last Layer
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-cyan-300">Realign Corners Correctly</h3>
+            <twisty-player
+              puzzle="3x3x3"
+              alg="R' F R' B B R F' R' B B R R U'"
+              background="none"
+              playback-view="end"
+              style="width:100%; height:300px;"
+            ></twisty-player>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-cyan-300">Realign center pieces of last layer</h3>
+            <twisty-player
+              puzzle="3x3x3"
+              alg="F F U L R' F F L' R U F F"
+              background="none"
+              playback-view="end"
+              style="width:100%; height:300px;"
+            ></twisty-player>
+          </div>
+        </div>
+          
     </main>
 
     <!-- Footer -->
