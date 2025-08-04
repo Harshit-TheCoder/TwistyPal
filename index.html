@@ -1,132 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Rubik's Visualizer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.cubing.net/v0/js/cubing/twisty" type="module"></script>
-</head>
-<body class="bg-gray-900 text-white p-4 m-4 min-h-screen">
-  <h1 class="text-5xl text-white text-bold shadow-md text-center">Welcome to TwistyPal !!</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TwistyPal - Rubik's Visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.cubing.net/v0/js/cubing/twisty" type="module"></script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
 
-    <header class="py-6 bg-gray-900 shadow-md">
-        <nav>
-            <a href="#3by3" style="text-decoration: none;"><h2 class="text-xl font-semibold mb-2 text-cyan-400">🔍 #3*3*3 Rubiks Cube</h2></a>
-        </nav>
+      #tsparticles {
+        position: fixed;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-br from-gray-900 via-indigo-900 to-black text-white">
+    <div id="tsparticles"></div>
+
+    <!-- Header -->
+    <header class="py-10 text-center">
+      <h1 class="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text drop-shadow-lg">
+        Welcome to TwistyPal !!
+      </h1>
+      <nav class="mt-4">
+        <a
+          href="#3by3"
+          class="text-cyan-300 text-lg hover:text-cyan-100 transition"
+        >
+          🔍 #3×3×3 Rubik's Cube Guide
+        </a>
+      </nav>
     </header>
-  <!-- Load cubing.js from official CDN -->
-  
 
-  <!-- Player with your algorithm -->
-   <main class="min-h-screen">
-        <section id="3by3">
-            <h2 class="text-3xl text-white p-2 m-2 shadow-md">3*3*3 Rubiks Cube Guide</h2>
-            <section class="grid lg:grid-cols-3 gap-6">
-  <div>
-    <h3 class="text-white text-2xl">U (Up clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="U" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8" id="3by3">
+      <h2 class="text-3xl font-bold mb-6 border-l-4 border-cyan-500 pl-4">
+        3×3×3 Rubik's Cube Moves
+      </h2>
 
-  <div>
-    <h3 class="text-white text-2xl">U' (Up counter-clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="U'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Move Block Template -->
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">U (Up clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="U" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
 
-  <div>
-    <h3 class="text-white text-2xl">D (Down clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="D" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">U' (Up counter-clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="U'" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
 
-  <div>
-    <h3 class="text-white text-2xl">D' (Down counter-clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="D'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">D (Down clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="D" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
 
-  <div>
-    <h3 class="text-white text-2xl">L (Left clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="L" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">D' (Down counter-clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="D" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
 
-  <div>
-    <h3 class="text-white text-2xl">L' (Left counter-clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="L'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">L (Left clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="L" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">L' (Left counter-clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="L'" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">R (Right clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="R" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">R' (Right counter-clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="R'" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">F (Forward clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="F" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">F' (Forward counter-clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="F'" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">B (Backward clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="B" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">B' (Backward counter-clockwise)</h3>
+          <twisty-player puzzle="3x3x3" alg="B'" background="none" playback-view="end" style="width:100%; height:300px;"></twisty-player>
+        </div>
 
-  <div>
-    <h3 class="text-white text-2xl">R (Right clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="R" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+        <!-- Add other moves here (D', L, L', R, R', F, F', B, B') similarly -->
+      </div>
 
-  <div>
-    <h3 class="text-white text-2xl">R' (Right counter-clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="R'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+      <!-- Algorithms Section -->
+      <h2 class="text-3xl font-bold mt-12 mb-6 border-l-4 border-cyan-500 pl-4">
+        Algorithms
+      </h2>
 
-  <div>
-    <h3 class="text-white text-2xl">F (Front clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="F" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">Yellow Cross</h3>
+          <twisty-player
+            puzzle="3x3x3"
+            alg="R U R' U R U U R'"
+            background="none"
+            playback-view="end"
+            style="width:100%; height:300px;"
+          ></twisty-player>
+        </div>
 
-  <div>
-    <h3 class="text-white text-2xl">F' (Front counter-clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="F'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">Complete Yellow Side</h3>
+          <twisty-player
+            puzzle="3x3x3"
+            setup-alg="R U R' U R U U R'"
+            alg="R U R' U R U U R'"
+            background="none"
+            playback-view="start"
+            playback-loop="once"
+            style="width:100%; height:300px;"
+          ></twisty-player>
+        </div>
 
-  <div>
-    <h3 class="text-white text-2xl">B (Back clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="B" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">Align Corners</h3>
+          <twisty-player
+            puzzle="3x3x3"
+            alg="R' F R' B B R F' R' B B R R U'"
+            background="none"
+            playback-view="end"
+            style="width:100%; height:300px;"
+          ></twisty-player>
+        </div>
 
-  <div>
-    <h3 class="text-white text-2xl">B' (Back counter-clockwise)</h3>
-    <twisty-player puzzle="3x3x3" alg="B'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
-  </div>
-</section>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-cyan-300">Complete Last Layer</h3>
+          <twisty-player
+            puzzle="3x3x3"
+            alg="F F U L R' F F L' R U F F"
+            background="none"
+            playback-view="end"
+            style="width:100%; height:300px;"
+          ></twisty-player>
+        </div>
+      </div>
+    </main>
 
-            <h3 class="text-2xl text-white p-2 m-2">Yellow Cross Algorithm</h3>
-            <twisty-player
-                puzzle="3x3x3"
-                alg="R U R' U R U U R'"
-                background="none"
-                playback-view="end"
-                style="width:402px; height:402px;">
-            </twisty-player>
-            <br>
-            <h3 class="text-2xl text-white p-2 m-2">Complete Yellow Colour Side After Yellow Cross</h3>
-            <twisty-player
-                puzzle="3x3x3"
-                setup-alg="R U R' U R U U R'"
-                alg="R U R' U R U U R'"
-                background="none"
-                playback-view="start"
-                playback-loop="once"
-                style="width:402px; height:402px;">
-            </twisty-player>
-            <br>
-            <h3 class="text-2xl text-white p-2 m-2">Correctly Align Last Layer Corner Pieces</h3>
-            <twisty-player
-                puzzle="3x3x3"
-                alg="R' F R' B B R F' R' B B R R U'"
-                background="none"
-                playback-view="end"
-                style="width:402px; height:402px;">
-            </twisty-player>
-            <br>
-            <h3 class="text-2xl text-white p-2 m-2">Complete Last Layer</h3>
-            <twisty-player
-                puzzle="3x3x3"
-                alg="F F U L R' F F L' R U F F"
-                background="none"
-                playback-view="end"
-                style="width:402px; height:402px;">
-            </twisty-player>
-            <br>
-        </section>
-        
-   </main>
-  
-  <footer class="text-center py-4 text-white text-xl border-t border-gray-700 mx-auto">
-        &copy; 2025 Harshit Harlalka. All rights reserved.
-  </footer>
-</body>
+    <!-- Footer -->
+    <footer class="mt-16 text-center py-6 border-t border-gray-700 text-gray-400 text-lg">
+      &copy; 2025 Harshit Harlalka. All rights reserved.
+    </footer>
+
+    <!-- tsParticles Config -->
+    <script>
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: false },
+        background: { color: "transparent" },
+        particles: {
+          number: { value: 120 },
+          color: { value: "#00ffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.3 },
+          size: { value: { min: 1, max: 5 } },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            outModes: "bounce"
+          }
+        },
+        interactivity: {
+          events: {
+            onHover: { enable: true, mode: "repulse" },
+            resize: true
+          },
+          modes: {
+            repulse: { distance: 100 }
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
