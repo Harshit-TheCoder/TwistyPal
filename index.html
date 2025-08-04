@@ -21,6 +21,68 @@
    <main class="min-h-screen">
         <section id="3by3">
             <h2 class="text-3xl text-white p-2 m-2 shadow-md">3*3*3 Rubiks Cube Guide</h2>
+            <section class="grid lg:grid-cols-3 gap-6">
+  <div>
+    <h3 class="text-white text-2xl">U (Up clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="U" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">U' (Up counter-clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="U'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">D (Down clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="D" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">D' (Down counter-clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="D'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">L (Left clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="L" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">L' (Left counter-clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="L'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">R (Right clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="R" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">R' (Right counter-clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="R'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">F (Front clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="F" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">F' (Front counter-clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="F'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">B (Back clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="B" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+
+  <div>
+    <h3 class="text-white text-2xl">B' (Back counter-clockwise)</h3>
+    <twisty-player puzzle="3x3x3" alg="B'" background="none" playback-view="end" style="width:402px; height:402px;"></twisty-player>
+  </div>
+</section>
+
             <h3 class="text-2xl text-white p-2 m-2">Yellow Cross Algorithm</h3>
             <twisty-player
                 puzzle="3x3x3"
