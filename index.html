@@ -111,90 +111,15 @@
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-6 p-4 text-white">
-
-        <!-- Step 1: White Cross -->
         <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300 text-center">Step 1: Make the White Cross</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            setup-alg="F U R U'"
-            alg="F R D R' F'"
-            background="none"
-            playback-view="start"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-          <p class="text-sm mt-2">Solve the white edges to form a plus sign (cross) on the white face. Make sure the side colors of the edges also match the center colors.</p>
+          <h3 class="text-xl font-bold text-cyan-300 mb-2">F2L01</h3>
+          <img src="images/f2l1.png" alt="F2L01 case" class="rounded mb-2 w-full" />
+          <p><strong>Main Algorithm:</strong> <code>U R U' R'</code></p>
+          <ul class="list-disc list-inside text-sm text-white/80 mt-2">
+            <li><code>R' F R F'</code></li>
+          </ul>
         </div>
-
-        <!-- Step 2: Insert White Corners (Case 1) -->
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300 text-center">Step 2A: Insert White Corners</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            setup-alg="U R U'"
-            alg="R' D' R D"
-            background="none"
-            playback-view="start"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-          <p class="text-sm mt-2">Use the right-hand algorithm <code>R' D' R D</code> to insert white corners into the bottom layer one by one.</p>
-        </div>
-
-        <!-- Step 3: Insert White Corners (Case 2) -->
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300 text-center">Step 2B: Insert White Corners (Left Side)</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            setup-alg="U' L' U"
-            alg="L D L' D'"
-            background="none"
-            playback-view="start"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-          <p class="text-sm mt-2">If the white corner is on the left side, use <code>L D L' D'</code> to insert it into place.</p>
-        </div>
-
-        <!-- Step 4: Solve Edge Pair to Right -->
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300 text-center">Step 3A: Insert Edge (Right)</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            setup-alg="U R U' R' U' F' U F"
-            alg="U R U' R' U' F' U F"
-            background="none"
-            playback-view="start"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-          <p class="text-sm mt-2">Find a top-layer edge (without yellow). Use this algorithm to insert it to the right side.</p>
-        </div>
-
-        <!-- Step 5: Solve Edge Pair to Left -->
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300 text-center">Step 3B: Insert Edge (Left)</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            setup-alg="U' L' U L U F U' F'"
-            alg="U' L' U L U F U' F'"
-            background="none"
-            playback-view="start"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-          <p class="text-sm mt-2">If the edge needs to go to the left middle layer, use this algorithm to insert it correctly.</p>
-        </div>
-
-        <!-- Step 6: Repeat Until F2L Complete -->
-        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-cyan-300 text-center">Step 4: Repeat for All Edges</h3>
-          <twisty-player
-            puzzle="3x3x3"
-            setup-alg="F U R U' R' F' U R U' R' U' F' U F"
-            alg=""
-            background="none"
-            playback-view="start"
-            style="width:100%; height:300px;"
-          ></twisty-player>
-          <p class="text-sm mt-2">Repeat the process for all edge pieces (without yellow). You’ll complete the first two layers (F2L) of the cube.</p>
-        </div>
+        
       </div>
 
       
